@@ -17,6 +17,9 @@ function book(title, author, pages, status){
 const hobbit = new book('The Hobbit', 'J.R.R Tolkien', 295, 'yes');
 console.log(hobbit.info());
 
-function addBook(){
-
+function addBook(bookObj){
+    myLibrary.push(bookObj);
 };
+
+addBook(hobbit);
+console.log(myLibrary);
