@@ -1,0 +1,36 @@
+body{
+    background-color: #fb545b;
+}
+#cover-image{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+footer{
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    font-size: 15px;
+    /* padding-left: 5px; */
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#gh-logo{
+    width: 19px;
+    height: 19px;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.content.left {
+    margin-left: 10px;
+}
+  
+.content.right {
+    float: right;
+    margin-right: 20px;
+}
