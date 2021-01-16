@@ -1,24 +1,72 @@
 body{
-    background-color: #fb545b;
+    background-color: #fc5759;
 }
+
+.wrapper{
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center; 
+    padding-top: 50px;
+}
+
+.main-content{
+    width: 1000px;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;  
+    /* outline-width: 1px; 
+    outline-color: black;
+    outline-style: solid; */
+}
+
+h1{
+    font-family: Roboto Slab;
+    font-size: 50px;
+}
+
 #cover-image{
     display: block;
     margin-left: auto;
     margin-right: auto;
     width: 50%;
 }
+
+button {
+    font-size: 25px;
+    outline:None;
+    border: 0;
+    height: 50px;
+    width: 100px;
+    border-radius: 5px;
+    background-color: rgb(41, 40, 40);
+    color: white;
+    transition: all 400ms cubic-bezier(0.2, 0, 0, 0.8);
+    -webkit-transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+    transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+}
+
+button:hover{
+    color: black;
+    outline-color: rgba(71, 126, 232, 0);
+    outline-offset: 300px;
+    box-shadow: 0 0 40px 40px #e0dfc0 inset;
+}
+
 footer{
     width: 100%;
     position: fixed;
     bottom: 0;
     font-size: 15px;
+    padding-bottom: 4px;
     /* padding-left: 5px; */
     font-family: Arial, Helvetica, sans-serif;
 }
 
 #gh-logo{
-    width: 19px;
-    height: 19px;
+    width: 15px;
+    height: 15px;
 }
 
 a{
@@ -28,9 +76,11 @@ a{
 
 .content.left {
     margin-left: 10px;
+    margin-right: 10px;
 }
   
 .content.right {
     float: right;
-    margin-right: 20px;
-}
+    margin-right: 25px;
+    margin-left:10px;
+} 
