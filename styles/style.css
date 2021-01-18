@@ -1,6 +1,50 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: 0px;
+}
+
 body{
     background-color: #FFFDD0;
 }
+
+nav{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    background-color: #805A46;
+    font-family: 'Poppins', sans-serif;
+}
+
+#logo{
+    width:29px;
+    height:29px;
+}
+
+#direct-home{
+    font-size: 40px;
+    text-decoration: none;
+    color: #FDFFF5;
+}
+
+.nav-links{
+    display: flex;
+    justify-content: space-around;
+    width: 40%;
+    /* background-color: red; */
+}
+
+.nav-links li{
+    letter-spacing: none;
+}
+.nav-links a{
+    color: #FDFFF5;
+    text-decoration: none;
+    letter-spacing: 4px;
+    font-weight: bold;
+}
+
 footer{
     width: 100%;
     position: fixed;
@@ -16,7 +60,7 @@ footer{
     height: 15px;
 }
 
-a{
+#gh-link{
     text-decoration: none;
     color: black;
 }
