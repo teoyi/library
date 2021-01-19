@@ -112,6 +112,76 @@ nav{
 }
 
 
+.table{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 50px;
+}
+
+table{
+    border-collapse: collapse;
+}
+
+table td, table th {
+    height: 60px;
+    border: 1px solid black;
+    border-top: 0;
+    border-left: 0;
+    border-right:0;
+}
+
+.table-content{
+    width: 90%;
+    text-align: center;
+}
+
+.status-button{
+    font-size: 13px;
+    outline:None;
+    border: 0;
+    height: 50px;
+    width: 100px;
+    border-radius: 5px;
+    background-color: #FDFFF5;
+    color: black;
+    cursor: pointer;
+    transition: all 400ms cubic-bezier(0.2, 0, 0, 0.8);
+    -webkit-transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+    transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+}
+
+.status-button:hover{
+    color: black;
+    outline-color: rgba(71, 126, 232, 0);
+    outline-offset: 300px;
+    box-shadow: 0 0 40px 40px #e0dfc0 inset;
+}
+
+#del-col{
+    width: 0px;
+}
+.delete{
+    font-size: 25px;
+    outline:None;
+    border: 0;
+    height: 50px;
+    width: 100px;
+    border-radius: 5px;
+    background-color: #FFFDD0;
+    color: grey;
+    cursor: pointer;
+    transition: all 400ms cubic-bezier(0.2, 0, 0, 0.8);
+}
+
+.delete:hover{
+    color: black;
+    font-size: 30px;
+}
+
+
+
+
 
 footer{
     width: 100%;
@@ -132,3 +202,4 @@ footer{
     text-decoration: none;
     color: black;
 }
+
