@@ -15,39 +15,14 @@ function book(title, author, pages, status){
 };
 
 const hobbit = new book('The Hobbit', 'J.R.R Tolkien', '295', 'yes');
+const got = new book('The Game of Thrones', 'George R.R Martin', '694', 'no');
 console.log(hobbit.info());
+console.log(got.info())
 
 function addBook(bookObj){
     myLibrary.push(bookObj);
 };
 
 addBook(hobbit);
-console.log(myLibrary);
-
-
-// Navigation tings 
-const navSlide = () => {
-    const burger = document.querySelector('.burger');
-    const nav = document.querySelector('.nav-links');
-    const navLinks = document.querySelectorAll('.nav-links li');
-    
-
-    burger.addEventListener('click', ()=>{
-
-        // Toggle Nav
-        nav.classList.toggle('nav-active');
-
-        //Animate Links 
-        navLinks.forEach((link, index)=>{
-            if (link.style.animation) {
-                link.style.animation = '';
-            } else {
-                link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.3}s`;
-            };
-        });
-
-        // Burger Cross
-        burger.classList.toggle('toggle');
-    });
-};
-navSlide();
+addBook(got);
+console.log(myLibrary[0]);
