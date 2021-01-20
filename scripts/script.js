@@ -5,7 +5,7 @@ function book(title, author, pages, status){
     this.title = title; 
     this.author = author;
     this.pages = pages; 
-    this.read = status; // Indication of yes or no will relate to read or not read respectively
+    this.status = status; // Indication of yes or no will relate to read or not read respectively
 };
 
 // Function to create book object and append to array 
@@ -54,25 +54,37 @@ function loc(arr, title){
     };
 };
 
+// Function to flip status 
+function flip(book){
+    if (myLibrary[book].status === 'READ'){
+        myLibrary[book].status = 'NOT READ';
+    } else {
+        myLibrary[book].status = 'READ';
+    };
+};
+
 
 
 const tbl = document.querySelector('table');
 tbl.addEventListener('click', (e) => {
     const currentTarget = e.target.parentNode.parentNode.childNodes[1];
+    console.log(e.target.innerHTML);
     if (e.target.innerHTML === 'x'){
-        delBook(loc(myLibrary, currentTarget.innerHTML));
-        console.log(myLibrary);
+        if (confirm(`Are you sure you want to remove '${currentTarget.innerHTML}' from the library?`)){
+            delBook(loc(myLibrary, currentTarget.innerHTML));
+        };
+    };
+    if (e.target.innerHTML === 'READ' || e.target.innerHTML === 'NOT READ'){
+        flip(loc(myLibrary, currentTarget.innerHTML));
     };
     update();
 });
 
 
-
-const hobbit = new book('The Hobbit', 'J.R.R Tolkien', '295', 'yes');
-const got = new book('The Game of Thrones', 'George R.R Martin', '694', 'no');
+// Initial Config 
+const hobbit = new book('The Hobbit', 'J.R.R Tolkien', '295', 'READ');
+const got = new book('The Game of Thrones', 'George R.R Martin', '694', 'NOT READ');
 
 addBook(hobbit);
 addBook(got);
-iter(myLibrary);
-console.log(loc(myLibrary, 'The Hobbit'));
 update();
