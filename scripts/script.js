@@ -19,7 +19,7 @@ function iter(lst){
 };
 
 // Function to update the table
-const tableContent = document.querySelector('.book-list')
+const tableContent = document.querySelector('.book-list');
 function update(){
     tableContent.innerHTML = "";
     myLibrary.forEach((book) => {
@@ -37,6 +37,31 @@ function update(){
     console.log('updated!');
 };
 
+// Function to remove book from library array 
+function delBook(currentBook){
+    myLibrary.splice(currentBook, currentBook+1);
+};
+
+// Function to locate index of book in library array 
+function loc(arr, title){
+    if (arr.length === 0 || arr.length === null){
+        return;
+    };
+    for (book of myLibrary){
+        if (book.title === title) {
+            return myLibrary.indexOf(book);
+        };
+    };
+};
+
+
+
+// const tbl = document.querySelector('table');
+// tbl.addEventListener('click', (e) => {
+//     const currentTarget = e.target.parentNode.parentNode.childNodes[1];
+//     console.log(currentTarget);
+// })
+
 
 
 const hobbit = new book('The Hobbit', 'J.R.R Tolkien', '295', 'yes');
@@ -45,4 +70,5 @@ const got = new book('The Game of Thrones', 'George R.R Martin', '694', 'no');
 addBook(hobbit);
 addBook(got);
 iter(myLibrary);
+console.log(loc(myLibrary, 'The Hobbit'));
 update();
