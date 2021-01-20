@@ -56,11 +56,15 @@ function loc(arr, title){
 
 
 
-// const tbl = document.querySelector('table');
-// tbl.addEventListener('click', (e) => {
-//     const currentTarget = e.target.parentNode.parentNode.childNodes[1];
-//     console.log(currentTarget);
-// })
+const tbl = document.querySelector('table');
+tbl.addEventListener('click', (e) => {
+    const currentTarget = e.target.parentNode.parentNode.childNodes[1];
+    if (e.target.innerHTML === 'x'){
+        delBook(loc(myLibrary, currentTarget.innerHTML));
+        console.log(myLibrary);
+    };
+    update();
+});
 
 
 
