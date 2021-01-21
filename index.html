@@ -31,6 +31,18 @@
             </div>
         </nav>
         <div class="main-content">
+            <form class="form-inline" action="/script.js">
+                <label for="title">Title:</label>
+                <input type="text" id="title" placeholder="e.g. 'The Hobbit'" name="title">
+                <label for="author">Author:</label>
+                <input type="text" id="author" placeholder="e.g. 'J.R.R Tolkien'" name="author">
+                <label for="Pages">Pages:</label>
+                <input type="text" id="pages" placeholder="e.g. '295'" name="pages">
+                <label>
+                  <input type="checkbox" name="status"> Read
+                </label>
+                <button type="submit">Submit</button>
+            </form> 
             <div class="table">
                 <table class="table-content">
                     <tbody>
