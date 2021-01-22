@@ -1,9 +1,11 @@
 /* Form Styling */
+#form{
+    display: none;
+}
 .sub-container{
     display: flex;
     align-items: center;
     justify-content: center;
-    display: none;
     padding-bottom: 20px;
 }
 .inline{
@@ -76,6 +78,7 @@ input[type=submit]:hover {
     outline-offset: 300px;
     box-shadow: 0 0 40px 40px #e0dfc0 inset;
 }
+
 
 @media screen and (max-width: 768) {
     .form-inline input {
