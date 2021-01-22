@@ -23,16 +23,30 @@ const tableContent = document.querySelector('.book-list');
 function update(){
     tableContent.innerHTML = "";
     myLibrary.forEach((book) => {
-        const htmlBook = `
+        if (book.status === 'READ'){
+            const htmlBook = `
             <tr>
                 <td>${book.title}</td>
                 <td>${book.author}</td>
                 <td>${book.pages}</td>
-                <td><button class="status-button">${book.status}</button></td>
+                <td><button class="status-button" id="read">${book.status}</button></td>
                 <td><button class="delete">x</button></td>
             </tr>
             `;
-        tableContent.insertAdjacentHTML("afterbegin", htmlBook);
+            tableContent.insertAdjacentHTML("afterbegin", htmlBook);
+        } else if (book.status === 'NOT READ'){
+            const htmlBook = `
+            <tr>
+                <td>${book.title}</td>
+                <td>${book.author}</td>
+                <td>${book.pages}</td>
+                <td><button class="status-button" id="not-read">${book.status}</button></td>
+                <td><button class="delete">x</button></td>
+            </tr>
+            `;
+            tableContent.insertAdjacentHTML("afterbegin", htmlBook);
+        }
+ 
     });
     console.log('updated!');
 };
@@ -64,7 +78,7 @@ function flip(book){
 };
 
 
-
+// Table Event 
 const tbl = document.querySelector('table');
 tbl.addEventListener('click', (e) => {
     const currentTarget = e.target.parentNode.parentNode.childNodes[1];
