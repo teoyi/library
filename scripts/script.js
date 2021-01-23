@@ -94,6 +94,30 @@ tbl.addEventListener('click', (e) => {
     update();
 });
 
+// Form Submission Event 
+let form_status = ''; 
+const checkBox = document.getElementById("status");
+
+function testCheck() {
+    if (checkBox.checked) {
+        return form_status = 'READ';
+    } else {
+        return form_status = 'NOT READ';
+    };
+};
+
+const form = document.querySelector("form")
+form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const title = document.getElementById("title").value;
+    const author = document.getElementById("author").value;
+    const pages = document.getElementById("pages").value;
+    testCheck();
+    const book_new = new book(title, author, pages, form_status);
+    addBook(book_new);
+    update();
+
+  });
 
 // Initial Config 
 const hobbit = new book('The Hobbit', 'J.R.R Tolkien', '295', 'READ');
