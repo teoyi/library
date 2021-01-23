@@ -1,7 +1,7 @@
 let myLibrary = [];
 
 // Parent that contains information about the object
-function book(title, author, pages, status){
+function Book(title, author, pages, status){
     this.title = title; 
     this.author = author;
     this.pages = pages; 
@@ -112,16 +112,22 @@ form.addEventListener("submit", (e) => {
     const title = document.getElementById("title").value;
     const author = document.getElementById("author").value;
     const pages = document.getElementById("pages").value;
-    testCheck();
-    const book_new = new book(title, author, pages, form_status);
-    addBook(book_new);
-    update();
-
-  });
+    if (title.length === 0 || author.length === 0) {
+        alert('Insufficient information. Please try again.')
+    } else if (!/^\d+$/.test(pages)){
+        alert('Invalid entry for number of pages. Please try again')
+    } else {
+        testCheck();
+        const book_new = new Book(title, author, pages, form_status);
+        addBook(book_new);
+        update();
+        form.reset();
+    };
+});
 
 // Initial Config 
-const hobbit = new book('The Hobbit', 'J.R.R Tolkien', '295', 'READ');
-const got = new book('The Game of Thrones', 'George R.R Martin', '694', 'NOT READ');
+const hobbit = new Book('The Hobbit', 'J.R.R Tolkien', '295', 'READ');
+const got = new Book('The Game of Thrones', 'George R.R Martin', '694', 'NOT READ');
 
 addBook(hobbit);
 addBook(got);
