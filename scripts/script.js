@@ -112,18 +112,28 @@ form.addEventListener("submit", (e) => {
     const title = document.getElementById("title").value;
     const author = document.getElementById("author").value;
     const pages = document.getElementById("pages").value;
+    testCheck();
     if (title.length === 0 || author.length === 0) {
         alert('Insufficient information. Please try again.')
     } else if (!/^\d+$/.test(pages)){
         alert('Invalid entry for number of pages. Please try again')
     } else {
-        testCheck();
         const book_new = new Book(title, author, pages, form_status);
-        addBook(book_new);
-        update();
-        form.reset();
+        if (myLibrary.some(book => book.title === book_new.title)) {
+            alert('This book already exists within the library.');
+        } else {
+            addBook(book_new);
+            update();
+            form.reset();
+        };
     };
 });
+
+// if(persons.some(person => person.name === "Peter")){
+//     alert("Object found inside the array.");
+// } else{
+//     alert("Object not found.");
+// }
 
 // Initial Config 
 const hobbit = new Book('The Hobbit', 'J.R.R Tolkien', '295', 'READ');
