@@ -129,12 +129,6 @@ form.addEventListener("submit", (e) => {
     };
 });
 
-// if(persons.some(person => person.name === "Peter")){
-//     alert("Object found inside the array.");
-// } else{
-//     alert("Object not found.");
-// }
-
 // Initial Config 
 const hobbit = new Book('The Hobbit', 'J.R.R Tolkien', '295', 'READ');
 const got = new Book('The Game of Thrones', 'George R.R Martin', '694', 'NOT READ');
