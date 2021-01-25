@@ -28,3 +28,7 @@ Elements of this website includes:
 If the user would like to add a book, they may click on "+Add Book" button and begin filling out the form before clicking on submit. Existence of duplicates or restricted characters in the input field will result in an alert notifying the user of their mistake. 
 
 <img width="1223" alt="Screen Shot 2021-01-24 at 11 22 03 PM" src="https://user-images.githubusercontent.com/67887422/105673575-13cbd780-5e9b-11eb-81cd-447803037712.png">
+
+Out of personal interest, the library is built to be reactive to window size, thus enabling "mobile" view as seen below. 
+<img width="748" alt="Screen Shot 2021-01-24 at 11 35 12 PM" src="https://user-images.githubusercontent.com/67887422/105674779-db2cfd80-5e9c-11eb-9671-b48b043d7605.png">
+<img width="748" alt="Screen Shot 2021-01-24 at 11 35 26 PM" src="https://user-images.githubusercontent.com/67887422/105674782-dc5e2a80-5e9c-11eb-98c7-8101e505a977.png">
