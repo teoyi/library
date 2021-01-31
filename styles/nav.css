@@ -11,7 +11,7 @@
 #direct-home{
     font-size: 40px;
     text-decoration: none;
-    color: #FDFFF5;
+    color: grey;
 }
 
 .nav-links{
@@ -28,7 +28,7 @@
 }
 
 .nav-links a{
-    color: #FDFFF5;
+    color: grey;
     text-decoration: none;
     letter-spacing: 2px;
     font-weight: bold;
@@ -41,7 +41,7 @@
 .burger div{
     width: 23px;
     height: 3px;
-    background-color: #FDFFF5;
+    background-color: grey;
     margin: 5px;
     border-radius: 3px;
     transition: all 0.3s ease;
